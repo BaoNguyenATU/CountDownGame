@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CountDownGame.MainPage"
+             BackgroundColor="#282C34">
+    <StackLayout Padding="20" Spacing="20">
+        <Label Text="Countdown Game"
+               FontSize="36"
+               TextColor="#61DAFB"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               Margin="0,20,0,10" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+            <Entry x:Name="Player1NameEntry" Placeholder="Player 1 Name" WidthRequest="150"
+                   BackgroundColor="#3C4043" TextColor="White" PlaceholderColor="Gray" />
+            <Entry x:Name="Player2NameEntry" Placeholder="Player 2 Name" WidthRequest="150"
+                   BackgroundColor="#3C4043" TextColor="White" PlaceholderColor="Gray" />
+        </StackLayout>
+
+        <Label x:Name="GameMessage"
+               FontSize="24"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+            <Button Text="Start Game"
+                    BackgroundColor="#61DAFB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="OnStartGameClicked" />
+
+            <Button Text="Submit Word"
+                    BackgroundColor="#61DAFB"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="OnSubmitWordClicked" />
+        </StackLayout>
+
+        <StackLayout Padding="0,20,0,0">
+            <Label Text="Selected Letters"
+                   FontSize="18"
+                   TextColor="#61DAFB"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="SelectedLetters"
+                   FontSize="24"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10" Padding="0,20,0,0">
+            <Entry x:Name="Player1WordEntry" Placeholder="Player 1 Word" WidthRequest="150"
+                   BackgroundColor="#3C4043" TextColor="White" PlaceholderColor="Gray" />
+            <Entry x:Name="Player2WordEntry" Placeholder="Player 2 Word" WidthRequest="150"
+                   BackgroundColor="#3C4043" TextColor="White" PlaceholderColor="Gray" />
+        </StackLayout>
+
+        <Label x:Name="TimerLabel"
+               FontSize="48"
+               TextColor="#E06C75"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               Margin="0,30,0,0" />
+
+    </StackLayout>
+</ContentPage>

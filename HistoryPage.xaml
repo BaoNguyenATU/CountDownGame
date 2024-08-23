@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CountDownGame.HistoryPage"
+             Title="Game History">
+
+	<StackLayout Padding="20">
+		<Label Text="Game History" FontSize="24" HorizontalOptions="Center" />
+		<ListView x:Name="HistoryListView" HasUnevenRows="True">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Vertical" Padding="10">
+							<Label Text="{Binding Timestamp}" FontAttributes="Bold" />
+							<Label Text="{Binding Player1Name}" TextColor="Blue" />
+							<Label Text="{Binding Player1Score}" TextColor="Green" />
+							<Label Text="{Binding Player2Name}" TextColor="Blue" />
+							<Label Text="{Binding Player2Score}" TextColor="Green" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>
